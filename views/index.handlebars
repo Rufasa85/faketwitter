@@ -1,0 +1,8 @@
+<h1>Twine Time!</h1>
+<h3>All the Twines!</h3>
+{{#each blogs}}
+    <div class="card">
+        <h4>{{title}} by {{User.name}} on {{createdAt}}</h4>
+        <p>{{body}}</p>
+    </div>
+{{/each}}

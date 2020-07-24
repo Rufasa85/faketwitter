@@ -3,6 +3,7 @@ const app = express();
 const db = require('./models')
 const exphbs = require('express-handlebars');
 const session = require("express-session");
+require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
  
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(session({
-    secret: "keyboard cat",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {

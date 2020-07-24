@@ -1,2 +1,21 @@
 <h1>Welcome to the club {{name}}!</h1>
 <h3>We will contact you at {{email}}.</h3>
+
+<form id="createBlog">
+    <input type="text" name="title" id="blogTitle" placeholder="blogTitle">
+    <textarea name="body" id="blogBody" cols="30" rows="10"></textarea>
+    <button>Twine!</button>
+</form>
+<h3>Previous twines:</h3>
+<div class="cardFlex">
+    {{#each Blogs}}
+        <div class="card">
+            <h4>{{title}}</h4>
+            <p>{{createdAt}}</p>
+            <h5>{{body}}</h5>
+            <button data-id={{id}} class="deleteBlogBtn">Delete</button>
+        </div>
+    {{/each}}
+</div>
+
+<script src="/js/clubhouse.js"></script>

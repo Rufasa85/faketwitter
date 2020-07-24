@@ -1,3 +1,24 @@
 body {
     background-color: salmon;
 }
+
+.cardFlex {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width:21%;
+    box-shadow: 4px 4px 6px green;
+    border:1px solid black;
+    border-radius:5%;
+}
+
+#navbar > a {
+    background:chartreuse;
+    margin:10px;
+}
+#navbar > a:hover{
+    opacity:0.5
+}
